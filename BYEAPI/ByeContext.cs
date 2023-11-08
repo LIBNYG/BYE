@@ -1,17 +1,29 @@
 using Microsoft.EntityFrameworkCore;
-using ProyectoSemana5.Models;
+using ByeApi.Models;
 
-namespace ProyectoSemana5.Context
+namespace ByeApi.Context
 {
-    public class FachadaContext : DbContext
+    public class ByeApiContext : DbContext
     {
-        public DbSet<Cita> Citas { get; set; }
-        public DbSet<Medico> Medicos { get; set; }
-        public DbSet<Persona> Personas { get; set; }
-        public DbSet<TipoMedico> TipoMedicos { get; set; }
-        public DbSet<TipoServicio> TipoServicios { get; set; }
-        public DbSet<Usuario> Usuarios { get; set; }
-        public FachadaContext(DbContextOptions<FachadaContext> options) : base(options) { }
+        public ByeApiContext(DbContextOptions<ByeApiContext> options) : base(options) { }
+
+        public DbSet<User> Users { get; set; }
+        public DbSet<Clothes> Clothes { get; set; }
+        public DbSet<ClothesType> ClothesTypes { get; set; }
+        public DbSet<Color> Colors { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<Parameters> Parameters { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Sale> Sales { get; set; }
+        public DbSet<Sonny> Sonnies { get; set; }
+        public DbSet<Size> Sizes { get; set; }
+        public DbSet<SaleType> SaleTypes { get; set; }
+        public DbSet<ShoppingCart> ShoppingCarts { get; set; }
+        public DbSet<SoldProduct> SoldProducts { get; set; }
+        public DbSet<UserType> UserTypes { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+
+        }
     }
 }
-
